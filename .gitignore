@@ -1,2 +1,12 @@
 .DS_Store
 Docs/
+frontend/node_modules/
+assets/build/
+.env
+.env.*
+!.env.example
+*.log
+*.tmp
+
+# Private Brave Search credentials
+backend/private/config/brave-search.php

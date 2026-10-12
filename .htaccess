@@ -1,0 +1,23 @@
+# Shared local/live routing; DocumentRoot is the repository root.
+Options -Indexes -MultiViews
+DirectoryIndex index.php
+ErrorDocument 404 /404.php
+RewriteEngine On
+
+# Private source, documentation, tooling, and hidden files.
+RewriteRule (^|/)\. - [F,END]
+RewriteRule ^(?:backend|frontend|includes|database|node_modules|vendor|tools|Docs)(?:/|$) - [F,END,NC]
+
+# Public PHP entry points and clean application URLs.
+RewriteRule ^api/advice/?$ api/advice.php [END]
+RewriteRule ^api/advice\.php$ - [END]
+RewriteRule ^index\.php$ / [R=302,END]
+RewriteRule ^404\.php$ - [END]
+RewriteRule ^$ index.php [END]
+RewriteRule ^(?:experiments|whippers|about)/?$ index.php [END]
+RewriteRule ^experiments/[a-z0-9]+(?:-[a-z0-9]+)*/?$ index.php [END]
+
+# Allow existing public assets only, never arbitrary project files.
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^assets/[a-zA-Z0-9/_.-]+\.(?:css|js|gif|png|jpe?g|webp|svg|ico|woff2?)$ - [END]
+RewriteRule ^ - [R=404,END]

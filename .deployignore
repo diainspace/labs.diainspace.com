@@ -1,15 +1,13 @@
-# macOS metadata
 .DS_Store
-
-# Git files
 .git/
 .gitignore
-
-# TIFF source artwork
-*.tif
-*.tiff
-*.TIF
-*.TIFF
-
-#Documentation
 Docs/
+frontend/
+node_modules/
+.env
+.env.*
+*.log
+*.tmp
+
+# Private Brave Search credentials
+backend/private/config/brave-search.php
