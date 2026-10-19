@@ -20,4 +20,5 @@ RewriteRule ^experiments/[a-z0-9]+(?:-[a-z0-9]+)*/?$ index.php [END]
 # Allow existing public assets only, never arbitrary project files.
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^assets/[a-zA-Z0-9/_.-]+\.(?:css|js|gif|png|jpe?g|webp|svg|ico|woff2?)$ - [END]
+RewriteRule ^robots\.txt$ - [END]
 RewriteRule ^ - [R=404,END]
