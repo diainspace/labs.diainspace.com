@@ -20,6 +20,8 @@ function escape(string $value): string { return htmlspecialchars($value, ENT_QUO
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="rebel-permissions" content="index, render">
+    <meta name="rebel-storage" content="full">
     <title><?= escape($route['title']) ?> — labs.diainspace.com</title>
     <meta name="description" content="A playground for curious ideas, questionable solutions, and delightfully serious engineering.">
     <meta name="theme-color" content="#1237ff">
