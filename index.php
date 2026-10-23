@@ -25,6 +25,7 @@ function escape(string $value): string { return htmlspecialchars($value, ENT_QUO
     <title><?= escape($route['title']) ?> — labs.diainspace.com</title>
     <meta name="description" content="A playground for curious ideas, questionable solutions, and delightfully serious engineering.">
     <meta name="theme-color" content="#1237ff">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
     <?php foreach ($entry['css'] ?? [] as $css): ?>
     <link rel="stylesheet" href="/assets/build/<?= escape($css) ?>">
     <?php endforeach; ?>
