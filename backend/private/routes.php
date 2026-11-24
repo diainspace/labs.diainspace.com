@@ -11,6 +11,8 @@ function labRoute(string $uri): array
         '/index.php' => 'Lab',
         '/experiments' => 'Experiments',
         '/whippers' => 'Whippers',
+        '/whippers/liszt' => 'Liszt — Whipper',
+        '/whippers/liszt/architecture' => 'Liszt — Architecture',
         '/about' => 'About',
         '/experiments/the-indecision-engine' => 'The Indecision Engine',
         '/experiments/the-infinite-canvas' => 'The Infinite Canvas',

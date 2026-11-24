@@ -15,6 +15,7 @@ RewriteRule ^index\.php$ / [R=302,END]
 RewriteRule ^404\.php$ - [END]
 RewriteRule ^$ index.php [END]
 RewriteRule ^(?:experiments|whippers|about)/?$ index.php [END]
+RewriteRule ^whippers/liszt(?:/architecture)?/?$ index.php [END]
 RewriteRule ^experiments/[a-z0-9]+(?:-[a-z0-9]+)*/?$ index.php [END]
 
 # Allow existing public assets only, never arbitrary project files.
