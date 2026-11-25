@@ -199,3 +199,6 @@ blockquote { font-size: clamp(14px, 1.8vw, 22px); line-height: 1.55; }
   .paper-flow { padding: 20px 16px; }
   .paper-body th, .paper-body td { min-width: 140px; }
 }
+
+/* Keep field and interface labels readable in the DIE reference tables. */
+.die-paper table th:first-child { min-width: 8rem; }
